@@ -1,6 +1,6 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-from setuptools import setup
+from setuptools import setup, find_packages
 from codecs import open
 from os import path
 
@@ -29,6 +29,8 @@ setup(
 
     keywords=['ble', 'bluetooth', 'hci', 'parsing', 'jumper'],
     license='Apache 2.0',
+
+    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
 
     classifiers=[
         # How mature is this project? Common values are
