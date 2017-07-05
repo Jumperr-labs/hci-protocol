@@ -165,7 +165,7 @@ HandleValueNotification = "handle_value_notification" / Struct(
 
 AttWriteRequest = "att_write_request" / Struct(
     "handle" / Int16ul,
-    "data" / BytesInteger(this._._.length - 3, swapped=True)
+    "data" / Bytes(this._._.length - 3)
 )
 
 AttCommandPacket = "att_command_packet" / Struct(
